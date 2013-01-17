@@ -5,7 +5,8 @@ PhingTasks
 Example:
 ```
 
-   <errbit
+    <taskdef name="errbit" classname="ErrBitTask" classpath="${lib.path}/tasks" />
+    <errbit
         host = "${errbit.host}"
         apikey = "${errbit.apikey}"
         repository = "${svn.repo}" 
@@ -17,6 +18,7 @@ Example:
 Example:
 ```
 
+    <taskdef name="for" classname="ForTask" classpath="${lib.path}/tasks" />
     <for list="${build.projects}" param="build.project">
     <do>
          <phingcall target="bootstrap.export" />
